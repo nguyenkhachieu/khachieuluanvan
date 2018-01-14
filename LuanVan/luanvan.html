@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>LUANVANTOTNGHIEP</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+		<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+		<script type="text/javascript" src="js/slick-slider.js"></script>
+		<script src="js/chart.js"></script>
+		<script src="js/getjson.js"></script>
+		<script type="text/javascript" src="http://www.gstatic.com/charts/loader.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="logo left"><a href="#"><img src="images/TDTU20years-1_0.jpg"></a></div>
+				<div class="left title">
+					<div class="tdt-name-vn">ĐẠI HỌC TÔN ĐỨC THẮNG</div>
+					<div class="tdt-name-en">TON DUC THANG UNIVERSITY (TDTU)</div>
+				</div>
+				<div class="right">
+					<div class="elic-name">KHOA ĐIỆN - ĐIỆN TỬ</div>	
+					<div class="elic-find"><input class="input-find" type="text" name="Timkiem" placeholder="Tìm kiếm"></div>
+					<span class="icon-search"><i class="fa fa-search icon-search-1" aria-hidden="true"></i></span>
+				</div>	
+			</div>
+			<div class="slider">	
+				<img src="images/DNTN2.png"> 
+				<img src="images/DATN3.png">
+				<img src="images/DATN4.png">
+			</div>
+			<div class="main-content">
+				<h1 class="title-h1">LUẬN VĂN TỐT NGHIỆP</h1>
+			</div>
+			<!-- <div class="icon-pen">
+				<div class="pen"><a href="#"><img class="pen-img" src="images/pen_heart.png"></a></div>
+				<div class="pen-write"><a href="#"><img class="pen-write-img" src="images/heart-2.gif"></a></div>
+			</div> -->
+			
+			<div class="chart-content">
+		    <div class="chart-title">Nhiệt độ hiện tại là: <span class="temperature"></span> độ C</div>
+		    <div class="chart-title">Độ ẩm hiện tại là: <span class="humidity"></span> %</div>
+		    <div>
+	    		<div class="canvas">
+	  				<canvas id="bar-chart-tem-time"></canvas>
+		  		</div>
+			  	<div class="canvas">
+			  		<canvas id="bar-chart-hum-time"></canvas>
+			  	</div>
+	    	</div>
+		    <h1 class="title-h1">BIỂU ĐỒ HIỂN THỊ THEO NGÀY THÁNG NĂM</h1>
+		    <ul class="button" data-tab="list-tabs">
+		      <li class="button-title" data-tab="tabs-0">Days</li>
+		      <li class="button-title" data-tab="tabs-1">Months</li>
+		      <li class="button-title" data-tab="tabs-2">Year</li>
+		    </ul>
+		    <div class="row" data-content="list-content">
+		      <div class="block" data-content="content-0" >
+		        <div class="canvas">
+		          <canvas id="myChartTem"></canvas>
+		        </div>
+		        <div class="canvas">
+		          <canvas id="myChartDoam"></canvas>
+		        </div>
+		      </div>
+		      <div class="block" data-content="content-1">
+		      	<div class="canvas">
+		          <canvas id="TemMonth"></canvas>
+		        </div>
+		        <div class="canvas">
+		          <canvas id="DoamMonth"></canvas>
+		        </div>
+		      </div>
+		      <div class="block" data-content="content-2">
+		      	<div class="canvas">
+		          <canvas id="TemYear"></canvas>
+		        </div>
+		        <div class="canvas">
+		          <canvas id="DoamYear"></canvas>
+		        </div>
+		      </div>
+	      </div>
+	      <div class="row">
+	      	<h1 class="title-h1">BIỂU ĐỒ SO SÁNH</h1>
+		      <div class="canvas1">
+		        <canvas id="myChartsosanh"></canvas>
+		      </div>
+		      <div class="canvas1" style="padding-top: 50px; padding-bottom: 50px;">
+		        <canvas id="myChartsosanhdoam"></canvas>
+		      </div>
+		    </div>
+		  </div>
+
+		  <div>
+		  	<h1 class="title-h1 paddingNone">DỰ BÁO THỜI TIẾT</h1>
+		  	<iframe frameborder="0" marginwidth="0" marginheight="0" src="http://vtv.vn/du-bao-thoi-tiet.htm" width="100%" height="950" scrolling="no"></iframe>
+		</div>
+		<div class="canhbao">
+			<span class="thongbao1"><i class="fa fa-info-circle" aria-hidden="true"></i> NHIỆT ĐỘ ĐỘ ẨM THÔNG BÁO</span>
+			<span class="thongbao11"><a href="#">X</a></span>
+			<hr>
+			<p class="tem-bigger">Nhiệt độ hồ nuôi tôm đang lớn hơn 30 Độ C. Bạn nên bơm thêm nước vào và luôn giữ mực nước 1.5-1.7m để ổn định nhiệt độ cho ao nuôi</p>
+			<p class="tem-lower">Nhiệt độ hồ nuôi tôm đang nhỏ hơn 25 Độ C. Bạn nên thiết kế ương tôm trong bể và trải bạt để nhiệt độ ổn định cho ao nuôi.</p>
+			<p class="hum-bigger">Độ ẩm hồ nuôi tôm đang lớn hơn 90%. Bạn nên bơm thêm nước vào và luôn giữ mực nước 1.5-1.7m để ổn định độ ẩm cho ao nuôi</p>
+			<p class="hum-lower">Độ ẩm hồ nuôi tôm đang nhỏ hơn 70%. Bạn nên thiết kế ương tôm trong bể và trải bạt để độ ẩm ổn định cho ao nuôi.</p>
+			<hr>
+		</div>
+		<script src="js/chartjava.js"></script>
+		<script src="js/chartMonth.js"></script>
+		<script src="js/chartYear.js"></script>
+	</body>
+</html>
